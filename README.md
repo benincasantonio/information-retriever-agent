@@ -81,6 +81,15 @@ To run the application, execute the following command:
 streamlit run app.py
 ```
 
+## Models and APIs
+
+The application uses the following models and APIs:
+
+- **phi4 model**: Used to summarize the information. More details can be found [here](https://ollama.com/library/phi4).
+- **Gemini API**: Used for the search LinkedIn agent.
+
+These models and APIs can easily be changed thanks to the flexibility provided by LangChain.
+
 ## Files Description
 
 - `agents/search_linkedin_agent.py`: Contains the agent logic to search for LinkedIn profiles.
