@@ -8,13 +8,10 @@ if __name__ == "__main__":
     button = st.button("Submit")
 
     if button and name:
-        st.spinner("Retrieving Information")
-        result = retrieve_information(name=name, mock=True)
-        print(" Information Retrieved")
+        with st.spinner('Retrieving Information...'):
+            result = retrieve_information(name=name, mock=True)
         summary: Summary = result[0]
         image_url: str = result[1]
-
-        print(image_url)
 
         st.html(f'<img src="{image_url}" width="200" style="border-radius: 50%;">')
 
@@ -26,5 +23,4 @@ if __name__ == "__main__":
         for fact in summary.facts:
             st.text(fact)
 
-    
-  
+
