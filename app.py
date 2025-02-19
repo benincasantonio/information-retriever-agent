@@ -3,6 +3,7 @@ import streamlit as st
 
 from parsers.summary_parser import Summary
 
+
 if __name__ == "__main__":
     name = st.text_input("Enter name")
     button = st.button("Submit")
@@ -13,7 +14,8 @@ if __name__ == "__main__":
         summary: Summary = result[0]
         image_url: str = result[1]
 
-        st.html(f'<img src="{image_url}" width="200" style="border-radius: 50%;">')
+        
+        st.html(f'<img src="{image_url}" width="150px" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border-radius: 50%;">')
 
         st.header("Summary")
         st.text(summary.summary)
