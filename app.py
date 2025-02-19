@@ -15,7 +15,7 @@ if __name__ == "__main__":
         image_url: str = result[1]
 
         
-        st.html(f'<img src="{image_url}" width="150px" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border-radius: 50%;">')
+        st.markdown(f'<img src="{image_url}" style="border-radius:50%;display:block;width:200px;margin-left:auto; margin-right:auto;">', unsafe_allow_html=True)
 
         st.header("Summary")
         st.text(summary.summary)
